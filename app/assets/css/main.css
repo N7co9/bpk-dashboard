@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+    /*
+      Define the custom 'bpkBlue' color palette with all shades from 50 to 950.
+      This makes the color available throughout the application via Tailwind CSS.
+    */
+    --color-bpkBlue-50: #f0f6fa;
+    --color-bpkBlue-100: #e0edf5;
+    --color-bpkBlue-200: #c8e0ee;
+    --color-bpkBlue-300: #a4cfe4;
+    --color-bpkBlue-400: #7bbcd5;
+    --color-bpkBlue-500: #5ba0c3;
+    --color-bpkBlue-600: #4786ae;
+    --color-bpkBlue-700: #3778aa;
+    --color-bpkBlue-800: #316289;
+    --color-bpkBlue-900: #2c5371;
+    --color-bpkBlue-950: #1c3548;
+}

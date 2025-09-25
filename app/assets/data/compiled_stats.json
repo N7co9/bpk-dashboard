@@ -1,0 +1,232 @@
+{
+  "fundamentalStats": {
+    "bpkCount": 1368,
+    "avgDurationMinutes": 61,
+    "avgWordCount": 8039,
+    "vocabularySize": 173930
+  },
+  "statisticalBasics": {
+    "totalWordCount": 10997008,
+    "avg_ttr_per_bpk": 0.203,
+    "avgSentenceLength": 24.8,
+    "stopwordPercentage": 49.0,
+    "stopwordNominal": 5389827,
+    "lexicalDensity": 0.52,
+    "fillerWordRate": 1.07,
+    "honoresR": 120.5,
+    "yulesK": 85.3,
+    "redundanz": 15.6
+  },
+  "frequencyDistribution": {
+    "top_words": [
+      {
+        "label": "frage",
+        "value": 60928
+      },
+      {
+        "label": "herr",
+        "value": 34130
+      },
+      {
+        "label": "thema",
+        "value": 30298
+      },
+      {
+        "label": "bundesregierung",
+        "value": 26013
+      },
+      {
+        "label": "jahr",
+        "value": 18876
+      },
+      {
+        "label": "land",
+        "value": 15965
+      },
+      {
+        "label": "frau",
+        "value": 13037
+      },
+      {
+        "label": "gespräch",
+        "value": 12975
+      },
+      {
+        "label": "fall",
+        "value": 11932
+      },
+      {
+        "label": "mensch",
+        "value": 10791
+      }
+    ],
+    "top_sentences": [
+      {
+        "label": "mit einem neuen thema",
+        "value": 1067
+      },
+      {
+        "label": "liebe kolleginnen und kollegen herzlich willkommen",
+        "value": 437
+      },
+      {
+        "label": "das sehe ich nicht",
+        "value": 62
+      },
+      {
+        "label": "eine frage an herrn",
+        "value": 39
+      },
+      {
+        "label": "fragen zu anderen themen",
+        "value": 31
+      },
+      {
+        "label": "gibt es weitere fragen zu dem komplex",
+        "value": 29
+      },
+      {
+        "label": "ja vielen dank für die frage",
+        "value": 28
+      },
+      {
+        "label": "das ist nicht der fall",
+        "value": 27
+      },
+      {
+        "label": "weitere fragen dazu sehe ich nicht",
+        "value": 26
+      },
+      {
+        "label": "herzlich willkommen in der bundespressekonferenz zur regierungspressekonferenz",
+        "value": 23
+      }
+    ],
+    "top_persons": [
+      {
+        "label": "Jung",
+        "value": 1865
+      },
+      {
+        "label": "Hoffmann",
+        "value": 483
+      },
+      {
+        "label": "Steiner",
+        "value": 465
+      },
+      {
+        "label": "Rinke",
+        "value": 436
+      },
+      {
+        "label": "Schäfer",
+        "value": 362
+      },
+      {
+        "label": "Fischer",
+        "value": 359
+      },
+      {
+        "label": "Wagner",
+        "value": 344
+      },
+      {
+        "label": "merkel",
+        "value": 332
+      },
+      {
+        "label": "Seibert",
+        "value": 277
+      },
+      {
+        "label": "Jessen",
+        "value": 240
+      }
+    ],
+    "top_locations": [
+      {
+        "label": "Deutschland",
+        "value": 20149
+      },
+      {
+        "label": "Ukraine",
+        "value": 5139
+      },
+      {
+        "label": "Türkei",
+        "value": 4112
+      },
+      {
+        "label": "Europa",
+        "value": 3786
+      },
+      {
+        "label": "Russland",
+        "value": 3344
+      },
+      {
+        "label": "Israel",
+        "value": 2917
+      },
+      {
+        "label": "Berlin",
+        "value": 2447
+      },
+      {
+        "label": "USA",
+        "value": 2277
+      },
+      {
+        "label": "Afghanistan",
+        "value": 1911
+      },
+      {
+        "label": "Iran",
+        "value": 1865
+      }
+    ],
+    "top_themes": [
+      {
+        "label": "Internationale Beziehungen",
+        "value": 45673
+      },
+      {
+        "label": "Wirtschaft & Finanzen",
+        "value": 30882
+      },
+      {
+        "label": "Innere Sicherheit",
+        "value": 26322
+      },
+      {
+        "label": "Gesundheitspolitik",
+        "value": 20532
+      },
+      {
+        "label": "Verteidigung",
+        "value": 16246
+      },
+      {
+        "label": "Migration & Integration",
+        "value": 14214
+      },
+      {
+        "label": "Klimawandel & Energie",
+        "value": 12937
+      },
+      {
+        "label": "Bildung & Forschung",
+        "value": 12378
+      },
+      {
+        "label": "Soziale Gerechtigkeit",
+        "value": 8993
+      },
+      {
+        "label": "Digitalisierung",
+        "value": 8096
+      }
+    ]
+  }
+}
