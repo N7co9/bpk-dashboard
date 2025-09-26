@@ -1,0 +1,544 @@
+{
+  "frameAnalysis": {
+    "Gefahr/Krise": 11542,
+    "Chance/Lösung": 11265,
+    "Konflikt/Kampf": 6578,
+    "Sicherheit/Stabilität": 8985
+  },
+  "connotationIndex": {
+    "Deutschland": [
+      {
+        "adjektiv": "sozial",
+        "anzahl": 94
+      },
+      {
+        "adjektiv": "zuständig",
+        "anzahl": 90
+      },
+      {
+        "adjektiv": "groß",
+        "anzahl": 82
+      },
+      {
+        "adjektiv": "russisch",
+        "anzahl": 78
+      },
+      {
+        "adjektiv": "künftig",
+        "anzahl": 71
+      }
+    ],
+    "Ukraine": [
+      {
+        "adjektiv": "stark",
+        "anzahl": 3
+      },
+      {
+        "adjektiv": "westlich",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "ukrainer",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "versuch",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "demokratisch",
+        "anzahl": 2
+      }
+    ],
+    "Türkei": [
+      {
+        "adjektiv": "lebend",
+        "anzahl": 6
+      },
+      {
+        "adjektiv": "stabil",
+        "anzahl": 3
+      },
+      {
+        "adjektiv": "unterschiedlich",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "derzeitig",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "kooperativ",
+        "anzahl": 1
+      }
+    ],
+    "Europa": [
+      {
+        "adjektiv": "groß",
+        "anzahl": 320
+      },
+      {
+        "adjektiv": "zentral",
+        "anzahl": 84
+      },
+      {
+        "adjektiv": "wichtig",
+        "anzahl": 64
+      },
+      {
+        "adjektiv": "humanitär",
+        "anzahl": 53
+      },
+      {
+        "adjektiv": "eigen",
+        "anzahl": 49
+      }
+    ],
+    "Russland": [
+      {
+        "adjektiv": "groß",
+        "anzahl": 646
+      },
+      {
+        "adjektiv": "israelisch",
+        "anzahl": 618
+      },
+      {
+        "adjektiv": "stellvertretend",
+        "anzahl": 385
+      },
+      {
+        "adjektiv": "türkisch",
+        "anzahl": 375
+      },
+      {
+        "adjektiv": "russisch",
+        "anzahl": 343
+      }
+    ],
+    "Israel": [
+      {
+        "adjektiv": "sogenannter",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "untersuch",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "zitier",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "mutmaßlich",
+        "anzahl": 2
+      },
+      {
+        "adjektiv": "israelisch",
+        "anzahl": 2
+      }
+    ],
+    "Berlin": [
+      {
+        "adjektiv": "intern",
+        "anzahl": 14
+      },
+      {
+        "adjektiv": "entsprechend",
+        "anzahl": 13
+      },
+      {
+        "adjektiv": "ähnlich",
+        "anzahl": 9
+      },
+      {
+        "adjektiv": "erster",
+        "anzahl": 8
+      },
+      {
+        "adjektiv": "grundsätzlich",
+        "anzahl": 7
+      }
+    ],
+    "USA": [
+      {
+        "adjektiv": "groß",
+        "anzahl": 243
+      },
+      {
+        "adjektiv": "wichtig",
+        "anzahl": 172
+      },
+      {
+        "adjektiv": "intensiv",
+        "anzahl": 149
+      },
+      {
+        "adjektiv": "möglich",
+        "anzahl": 143
+      },
+      {
+        "adjektiv": "eigen",
+        "anzahl": 140
+      }
+    ],
+    "Afghanistan": [
+      {
+        "adjektiv": "gefährdet",
+        "anzahl": 13
+      },
+      {
+        "adjektiv": "ausreisepflichtig",
+        "anzahl": 9
+      },
+      {
+        "adjektiv": "aufhältig",
+        "anzahl": 4
+      },
+      {
+        "adjektiv": "sogenannter",
+        "anzahl": 3
+      },
+      {
+        "adjektiv": "schutzbedürftig",
+        "anzahl": 2
+      }
+    ],
+    "Iran": [
+      {
+        "adjektiv": "unruhig",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "auftret",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "iran",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "praktisch",
+        "anzahl": 1
+      },
+      {
+        "adjektiv": "eigen",
+        "anzahl": 1
+      }
+    ]
+  },
+  "narrativeIndex": [
+    {
+      "quartal": "Q1 2016",
+      "top_worter": [
+        "lösung",
+        "problem",
+        "schutz"
+      ]
+    },
+    {
+      "quartal": "Q1 2017",
+      "top_worter": [
+        "sicherheit",
+        "problem",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q1 2018",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q1 2019",
+      "top_worter": [
+        "sicherheit",
+        "lösung",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q1 2020",
+      "top_worter": [
+        "möglichkeit",
+        "krise",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q1 2021",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "krise"
+      ]
+    },
+    {
+      "quartal": "Q1 2022",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q1 2023",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q1 2024",
+      "top_worter": [
+        "möglichkeit",
+        "sicherheit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q1 2025",
+      "top_worter": [
+        "sicherheit",
+        "möglichkeit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q2 2016",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q2 2017",
+      "top_worter": [
+        "sicherheit",
+        "angriff",
+        "konflikt"
+      ]
+    },
+    {
+      "quartal": "Q2 2018",
+      "top_worter": [
+        "lösung",
+        "möglichkeit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q2 2019",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q2 2020",
+      "top_worter": [
+        "krise",
+        "lösung",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q2 2021",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "schutz"
+      ]
+    },
+    {
+      "quartal": "Q2 2022",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q2 2023",
+      "top_worter": [
+        "sicherheit",
+        "möglichkeit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q2 2024",
+      "top_worter": [
+        "angriff",
+        "möglichkeit",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q2 2025",
+      "top_worter": [
+        "sicherheit",
+        "angriff",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q3 2016",
+      "top_worter": [
+        "sicherheit",
+        "problem",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q3 2017",
+      "top_worter": [
+        "sicherheit",
+        "lösung",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q3 2018",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q3 2019",
+      "top_worter": [
+        "lösung",
+        "problem",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q3 2020",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "krise"
+      ]
+    },
+    {
+      "quartal": "Q3 2021",
+      "top_worter": [
+        "möglichkeit",
+        "sicherheit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q3 2022",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q3 2023",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q3 2024",
+      "top_worter": [
+        "sicherheit",
+        "problem",
+        "angriff"
+      ]
+    },
+    {
+      "quartal": "Q3 2025",
+      "top_worter": [
+        "möglichkeit",
+        "angriff",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q4 2016",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q4 2017",
+      "top_worter": [
+        "konflikt",
+        "problem",
+        "möglichkeit"
+      ]
+    },
+    {
+      "quartal": "Q4 2018",
+      "top_worter": [
+        "problem",
+        "möglichkeit",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q4 2019",
+      "top_worter": [
+        "möglichkeit",
+        "sicherheit",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q4 2020",
+      "top_worter": [
+        "konflikt",
+        "möglichkeit",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q4 2021",
+      "top_worter": [
+        "möglichkeit",
+        "schutz",
+        "problem"
+      ]
+    },
+    {
+      "quartal": "Q4 2022",
+      "top_worter": [
+        "möglichkeit",
+        "problem",
+        "lösung"
+      ]
+    },
+    {
+      "quartal": "Q4 2023",
+      "top_worter": [
+        "möglichkeit",
+        "angriff",
+        "sicherheit"
+      ]
+    },
+    {
+      "quartal": "Q4 2024",
+      "top_worter": [
+        "angriff",
+        "problem",
+        "möglichkeit"
+      ]
+    }
+  ]
+}

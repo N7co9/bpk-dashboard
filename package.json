@@ -12,8 +12,12 @@
   "dependencies": {
     "@nuxt/ui": "^4.0.0",
     "@vueuse/motion": "^3.0.3",
+    "apexcharts": "^5.3.5",
+    "chart.js": "^4.5.0",
     "nuxt": "^4.1.2",
     "vue": "^3.5.21",
-    "vue-router": "^4.5.1"
+    "vue-chartjs": "^5.3.2",
+    "vue-router": "^4.5.1",
+    "vue3-apexcharts": "^1.8.0"
   }
 }

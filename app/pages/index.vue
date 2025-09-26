@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import FrequencyDistribution from "~/components/Statistics/FrequencyDistribution.vue";
-import FrameAnalysis from "~/components/Statistics/FrameAnalysis.vue";
+import ContentAnalysis from "~/components/Statistics/ContentAnalysis.vue";
 import SpeakerAnalysis from "~/components/Statistics/SpeakerAnalysis.vue";
 import StatisticalBasics from "~/components/Statistics/StatisticalBasics.vue";
 
@@ -12,7 +12,7 @@ import StatisticalBasics from "~/components/Statistics/StatisticalBasics.vue";
     <main class="container mx-auto px-4 py-12">
       <StatisticalBasics/>
       <FrequencyDistribution />
-      <FrameAnalysis />
+      <ContentAnalysis />
       <SpeakerAnalysis />
     </main>
   </div>

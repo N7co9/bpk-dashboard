@@ -1,48 +1,76 @@
-import { ref, onMounted } from 'vue';
+import {onMounted, ref} from 'vue';
 
-// Define interfaces for type safety
-interface StatData {
-    [key: string]: any;
+// Define interfaces for our data structures for type safety
+interface StatItem {
+    label: string;
+    value: number | string;
 }
 
-interface FrequencyData {
-    [key: string]: { label: string; value: number }[];
+interface FrequencyDistributionData {
+    top_words: StatItem[];
+    top_sentences: StatItem[];
+    top_persons: StatItem[];
+    top_locations: StatItem[];
+    top_themes: StatItem[];
 }
 
+interface FrameAnalysisData {
+    [key: string]: number;
+}
+
+interface Connotation {
+    adjektiv: string;
+    anzahl: number;
+}
+
+interface ConnotationIndexData {
+    [key: string]: Connotation[];
+}
+
+interface NarrativeIndexItem {
+    quartal: string;
+    top_worter: string[];
+}
+
+interface AdvancedAnalysisData {
+    frameAnalysis: FrameAnalysisData;
+    connotationIndex: ConnotationIndexData;
+    narrativeIndex: NarrativeIndexItem[];
+}
+
+// The composable function
 export function useBPKData() {
-    const fundamentalStats = ref<StatData | null>(null);
-    const statisticalBasics = ref<StatData | null>(null);
-    const frequencyDistribution = ref<FrequencyData | null>(null);
-    const isLoading = ref(true);
-    const error = ref<string | null>(null);
+    const fundamentalStats = ref(null);
+    const statisticalBasics = ref(null);
+    const frequencyDistribution = ref<FrequencyDistributionData | null>(null);
+    const advancedAnalysis = ref<AdvancedAnalysisData | null>(null); // New ref for advanced data
 
-    async function fetchData() {
+    const loadData = async () => {
         try {
-            // Use dynamic import to load the local JSON file
-            const data = await import('~/assets/data/compiled_stats.json');
+            const compiledStatsResponse = await fetch('/../data/compiled_stats.json');
+            if (!compiledStatsResponse.ok) throw new Error('Network response for compiled_stats.json was not ok');
+            const compiledStatsData = await compiledStatsResponse.json();
 
-            // The default export of the JSON module is the data itself
-            fundamentalStats.value = data.fundamentalStats;
-            statisticalBasics.value = data.statisticalBasics;
-            frequencyDistribution.value = data.frequencyDistribution; // Assign new data
+            fundamentalStats.value = compiledStatsData.fundamentalStats;
+            statisticalBasics.value = compiledStatsData.statisticalBasics;
+            frequencyDistribution.value = compiledStatsData.frequencyDistribution;
 
-        } catch (e) {
-            console.error("Error loading BPK data:", e);
-            error.value = "Failed to load compiled statistics.";
-        } finally {
-            isLoading.value = false;
+            const advancedAnalysisResponse = await fetch('/data/advanced_analysis.json');
+            if (!advancedAnalysisResponse.ok) throw new Error('Network response for advanced_analysis.json was not ok');
+            advancedAnalysis.value = await advancedAnalysisResponse.json();
+
+        } catch (error) {
+            console.error("Fehler beim Laden der BPK-Daten:", error);
         }
-    }
+    };
 
-    // Fetch data when the composable is first used
-    onMounted(fetchData);
+    onMounted(loadData);
 
     return {
         fundamentalStats,
         statisticalBasics,
-        frequencyDistribution, // Expose new data
-        isLoading,
-        error
+        frequencyDistribution,
+        advancedAnalysis
     };
 }
 
