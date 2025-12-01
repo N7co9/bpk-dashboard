@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "extraction_date": "2025-12-01T16:20:24.218979",
+    "corpus_size": 1368,
+    "date_range": {
+      "start": "2016-01-04",
+      "end": "2025-09-22"
+    },
+    "total_entities_found": 17923,
+    "after_threshold": 44,
+    "processing_time_seconds": 1563.756152,
+    "method": "NER-based (ORG, LOC, EVENT, PRODUCT entities)",
+    "model": "spaCy de_core_news_lg",
+    "features": [
+      "Multi-word entities only",
+      "Case normalization (all Nominativ)",
+      "Article removal",
+      "Typo correction",
+      "Meta-term filtering",
+      "Post-processed: Duplicate entity merging applied"
+    ]
+  },
+  "top_entities": [
+    {
+      "label": "Auswärtige Amt",
+      "value": 2933
+    },
+    {
+      "label": "Europäische Union",
+      "value": 2073
+    },
+    {
+      "label": "Deutsche Bundestag",
+      "value": 977
+    },
+    {
+      "label": "Vereinte Nationen",
+      "value": 906
+    },
+    {
+      "label": "Europäische Kommission",
+      "value": 892
+    },
+    {
+      "label": "Europäische Rat",
+      "value": 653
+    },
+    {
+      "label": "Vereinigte Staaten",
+      "value": 459
+    },
+    {
+      "label": "Bundesrepublik Deutschland",
+      "value": 428
+    },
+    {
+      "label": "New York",
+      "value": 363
+    },
+    {
+      "label": "Europäische Parlament",
+      "value": 273
+    },
+    {
+      "label": "Corona Pandemie",
+      "value": 248
+    },
+    {
+      "label": "Deutsche Bahn",
+      "value": 181
+    },
+    {
+      "label": "Bundesamt Für Verfassungsschutz",
+      "value": 163
+    },
+    {
+      "label": "Deutsche Welle",
+      "value": 152
+    },
+    {
+      "label": "Britische Regierung",
+      "value": 127
+    },
+    {
+      "label": "Europäische Staaten",
+      "value": 120
+    },
+    {
+      "label": "Deutsche Bank",
+      "value": 112
+    },
+    {
+      "label": "Saudi Arabien",
+      "value": 99
+    },
+    {
+      "label": "Israelische Armee",
+      "value": 99
+    },
+    {
+      "label": "Deutsche Regierung",
+      "value": 97
+    },
+    {
+      "label": "Baden Württemberg",
+      "value": 95
+    },
+    {
+      "label": "Bundesagentur Für Arbeit",
+      "value": 93
+    },
+    {
+      "label": "Türkische Regierung",
+      "value": 83
+    },
+    {
+      "label": "Internationalen Strafgerichtshof",
+      "value": 78
+    },
+    {
+      "label": "Bundesamt Für Migration Und Flüchtlinge",
+      "value": 75
+    },
+    {
+      "label": "Italienische Regierung",
+      "value": 73
+    },
+    {
+      "label": "Air Berlin",
+      "value": 69
+    },
+    {
+      "label": "G20 Gipfel",
+      "value": 68
+    },
+    {
+      "label": "Afrikanische Union",
+      "value": 68
+    },
+    {
+      "label": "Nordrhein Westfalen",
+      "value": 67
+    },
+    {
+      "label": "Israelische Regierung",
+      "value": 64
+    },
+    {
+      "label": "Robert Koch Institut",
+      "value": 63
+    },
+    {
+      "label": "Sachsen Anhalt",
+      "value": 63
+    },
+    {
+      "label": "Griechische Inseln",
+      "value": 62
+    },
+    {
+      "label": "Kohle Kommission",
+      "value": 62
+    },
+    {
+      "label": "Social Media",
+      "value": 62
+    },
+    {
+      "label": "Internationalen Gerichtshof",
+      "value": 59
+    },
+    {
+      "label": "Nord Stream",
+      "value": 56
+    },
+    {
+      "label": "Us Regierung",
+      "value": 55
+    },
+    {
+      "label": "Internationalen Gemeinschaft",
+      "value": 52
+    },
+    {
+      "label": "G7 Gipfel",
+      "value": 52
+    },
+    {
+      "label": "Home Office",
+      "value": 51
+    },
+    {
+      "label": "Vereinigten Arabischen Emirate",
+      "value": 50
+    },
+    {
+      "label": "Schleswig Holstein",
+      "value": 48
+    }
+  ]
+}

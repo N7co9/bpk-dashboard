@@ -196,7 +196,7 @@ const prevNarrativePage = () => {
 
 
 <template>
-  <div v-if="advancedAnalysis" id="content-analysis" class="scroll-mt-24 mt-16">
+  <div v-if="advancedAnalysis" id="frame-analysis" class="scroll-mt-24 mt-16">
     <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-8">
       Frame-, Konnotations- & Narrativ-Analyse
     </h2>
