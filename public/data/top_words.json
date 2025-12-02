@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "extraction_date": "2025-12-02T16:26:38.968939",
+    "extractor": "TopWordsExtractor",
+    "corpus_size": 1368,
+    "total_unique_nouns": 102026
+  },
+  "top_words": [
+    {
+      "label": "frage",
+      "value": 59748
+    },
+    {
+      "label": "herr",
+      "value": 33359
+    },
+    {
+      "label": "thema",
+      "value": 29966
+    },
+    {
+      "label": "bundesregierung",
+      "value": 26012
+    },
+    {
+      "label": "land",
+      "value": 15975
+    },
+    {
+      "label": "frau",
+      "value": 13035
+    },
+    {
+      "label": "gespräch",
+      "value": 13020
+    },
+    {
+      "label": "fall",
+      "value": 11962
+    },
+    {
+      "label": "mensch",
+      "value": 10809
+    },
+    {
+      "label": "woche",
+      "value": 9700
+    },
+    {
+      "label": "kollege",
+      "value": 8994
+    },
+    {
+      "label": "zahl",
+      "value": 8219
+    },
+    {
+      "label": "seite",
+      "value": 7959
+    },
+    {
+      "label": "maßnahme",
+      "value": 7628
+    },
+    {
+      "label": "regierung",
+      "value": 7515
+    },
+    {
+      "label": "minister",
+      "value": 7424
+    },
+    {
+      "label": "stelle",
+      "value": 6679
+    },
+    {
+      "label": "ziel",
+      "value": 6179
+    },
+    {
+      "label": "nachfrage",
+      "value": 6178
+    },
+    {
+      "label": "entscheidung",
+      "value": 5984
+    },
+    {
+      "label": "bundeskanzlerin",
+      "value": 5904
+    },
+    {
+      "label": "bundeskanzler",
+      "value": 5831
+    },
+    {
+      "label": "staat",
+      "value": 5594
+    },
+    {
+      "label": "lage",
+      "value": 5581
+    },
+    {
+      "label": "bereich",
+      "value": 5518
+    },
+    {
+      "label": "situation",
+      "value": 5299
+    },
+    {
+      "label": "moment",
+      "value": 5144
+    },
+    {
+      "label": "amt",
+      "value": 5086
+    },
+    {
+      "label": "bericht",
+      "value": 4955
+    },
+    {
+      "label": "punkt",
+      "value": 4783
+    },
+    {
+      "label": "weg",
+      "value": 4766
+    },
+    {
+      "label": "sicht",
+      "value": 4695
+    },
+    {
+      "label": "unternehmen",
+      "value": 4405
+    },
+    {
+      "label": "rahmen",
+      "value": 4364
+    },
+    {
+      "label": "ministerium",
+      "value": 4286
+    },
+    {
+      "label": "verfahren",
+      "value": 4265
+    },
+    {
+      "label": "möglichkeit",
+      "value": 4263
+    },
+    {
+      "label": "antwort",
+      "value": 4211
+    },
+    {
+      "label": "bund",
+      "value": 4151
+    },
+    {
+      "label": "kabinett",
+      "value": 4131
+    },
+    {
+      "label": "gesetz",
+      "value": 4084
+    },
+    {
+      "label": "grund",
+      "value": 4012
+    },
+    {
+      "label": "monat",
+      "value": 4004
+    },
+    {
+      "label": "ort",
+      "value": 3979
+    },
+    {
+      "label": "problem",
+      "value": 3873
+    },
+    {
+      "label": "partner",
+      "value": 3854
+    },
+    {
+      "label": "million",
+      "value": 3848
+    },
+    {
+      "label": "information",
+      "value": 3842
+    },
+    {
+      "label": "euro",
+      "value": 3833
+    },
+    {
+      "label": "präsident",
+      "value": 3793
+    }
+  ]
+}

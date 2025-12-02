@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue';
 import { useBPKData } from '~/composables/useBPKData';
 
-const { frequencyDistribution, topPersons, topEntities, topCountries } = useBPKData();
+const { frequencyDistribution, topPersons, topEntities, topCountries, topThemes, topSentences } = useBPKData();
 
 // Track which cards are flipped
 const flippedCards = ref<{ [key: string]: boolean }>({});
@@ -37,7 +37,7 @@ const formattedDistributions = computed(() => {
     {
       title: 'Komposita',
       icon: 'i-heroicons-building-office-2',
-      items: topEntities.value ? topEntities.value.top_entities.slice(0, 10) : [],
+      items: topEntities.value ? topEntities.value.top_entities.slice(0, 10) : (frequencyDistribution.value?.top_entities || []),
       tooltip: "Zeigt die 10 häufigsten Organisationen, Institutionen und politischen Konzepte. Extrahiert mit spaCy NER für Multi-Word Entities (ORG, LOC, EVENT). Enthält EU-Institutionen, Ministerien, internationale Organisationen und relevante Events. Basierend auf 1.368 BPK-Transkripten.",
       hasCalculationDetails: true,
       calculationDetails: {
@@ -61,7 +61,7 @@ const formattedDistributions = computed(() => {
     {
       title: 'Top Personen',
       icon: 'i-heroicons-users-solid',
-      items: topPersons.value ? topPersons.value.top_persons.slice(0, 10) : [],
+      items: topPersons.value ? topPersons.value.top_persons.slice(0, 10) : (frequencyDistribution.value?.top_persons || []),
       tooltip: "Zeigt die 10 am häufigsten genannten Personen im gesamten Korpus (2016-2025). Extrahiert mit spaCy NER, intelligenter Name-Normalisierung und ohne Journalisten. Basierend auf 1.368 BPK-Transkripten.",
       hasCalculationDetails: true,
       calculationDetails: {
@@ -84,7 +84,7 @@ const formattedDistributions = computed(() => {
     {
       title: 'Top Länder',
       icon: 'i-heroicons-map-pin-solid',
-      items: topCountries.value ? topCountries.value.top_countries.slice(0, 10) : [],
+      items: topCountries.value ? topCountries.value.top_countries.slice(0, 10) : (frequencyDistribution.value?.top_locations || []),
       tooltip: "Zeigt die 10 am häufigsten erwähnten Länder im gesamten Korpus (2016-2025). Extrahiert mit spaCy NER, intelligenter Filterung ohne Whitelist und Synonym-Merging. Basierend auf 1.368 BPK-Transkripten.",
       hasCalculationDetails: true,
       calculationDetails: {
@@ -109,15 +109,48 @@ const formattedDistributions = computed(() => {
     {
       title: 'Top Themen',
       icon: 'i-heroicons-tag-solid',
-      items: frequencyDistribution.value.top_themes,
-      tooltip: "Ermittelt die 10 dominantesten Themenkomplexe durch Zählung vordefinierter Schlüsselwörter. Jedes Vorkommen eines Schlüsselworts wird dem entsprechenden Thema zugeordnet."
+      items: topThemes.value ? topThemes.value.top_themes.slice(0, 10) : (frequencyDistribution.value?.top_themes || []),
+      tooltip: "Zeigt die 10 dominantesten Themenkomplexe im gesamten Korpus (2016-2025). Extrahiert mit BERTopic: 3-Phasen-Pipeline aus Noun-Chunk-Extraktion, semantischem Clustering (UMAP+HDBSCAN) und intelligentem Labeling. Basierend auf 1.368 BPK-Transkripten.",
+      hasCalculationDetails: true,
+      calculationDetails: {
+        corpus: topThemes.value ? {
+          size: topThemes.value.metadata.corpus_size,
+          phrases: topThemes.value.metadata.total_phrases,
+          clusters: topThemes.value.metadata.total_clusters
+        } : null,
+        steps: [
+          "P1: spaCy Noun-Chunks → 3-Stufen Filter → Artikel-Entfernung",
+          "P2: BERT Embeddings → UMAP Reduktion → HDBSCAN Clustering",
+          "Smart Labeling (Meta-Filter + Centroid) + Hierarchisches Merging",
+          "Manuelles Semantic Merging (z.B. 'NATO Partnern' → 'NATO')",
+          "P3: Cluster→Doc Mapping → Meta-/Trash-Filter → Top 10"
+        ],
+        tech: `Python 3.9 · spaCy 3.7 · SentenceTransformers · UMAP · HDBSCAN · ~3.5 Min`
+      }
     },
     {
       title: 'Top Sätze',
       icon: 'i-heroicons-chat-bubble-left-ellipsis',
       class: 'lg:col-span-2',
-      items: frequencyDistribution.value.top_sentences,
-      tooltip: "Zeigt die 10 am häufigsten wiederholten Sätze. Ähnliche Sätze werden normalisiert und zusammengefasst, um die relevantesten Phrasen und Standardformulierungen zu identifizieren."
+      items: frequencyDistribution.value?.top_sentences || [],
+      tooltip: "Zeigt die 10 am häufigsten wiederholten Sätze im gesamten Korpus (2016-2025). Extrahiert mit spaCy Sentence Segmentation, Fuzzy-Deduplication und Längenfilterung. Basierend auf 1.368 BPK-Transkripten.",
+      hasCalculationDetails: true,
+      calculationDetails: {
+        corpus: topSentences.value ? {
+          size: topSentences.value.metadata.corpus_size,
+          totalSentences: topSentences.value.metadata.total_sentences,
+          canonicalForms: topSentences.value.metadata.canonical_forms
+        } : null,
+        steps: [
+          "spaCy Sentence Segmentation (de_core_news_lg)",
+          "Längenfilter: 5-12 Wörter (keine Fragmente, keine Run-ons)",
+          "Normalisierung: Lowercase, Satzzeichen entfernen",
+          "Fuzzy-Deduplication: Jaccard-Similarity ≥80% → Merge",
+          "Optimierung: Nur Top 500 Kandidaten für O(n²) Merge",
+          "Häufigkeitszählung → Top 50"
+        ],
+        tech: "Python 3.9 · spaCy 3.7 · Pool.imap_unordered · ~2.8 Min"
+      }
     }
   ];
 
@@ -127,7 +160,7 @@ const formattedDistributions = computed(() => {
     // Format labels based on the group title
     const formattedItems = items.map(item => {
       let label = item.label;
-      if (group.title === 'Top Personen' || group.title === 'Top Substantive' || group.title === 'Komposita' || group.title === 'Top Länder') {
+      if (group.title === 'Top Personen' || group.title === 'Top Substantive' || group.title === 'Komposita' || group.title === 'Top Länder' || group.title === 'Top Themen') {
         label = capitalizeWords(label);
       } else if (group.title === 'Top Sätze') {
         label = `"${capitalizeFirstLetter(label)}..."`;
@@ -225,8 +258,15 @@ const formattedDistributions = computed(() => {
               <div v-if="card.calculationDetails.corpus" class="bg-blue-50 dark:bg-blue-900/20 p-2 rounded text-xs">
                 <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-gray-700 dark:text-gray-300">
                   <div><strong>{{ card.calculationDetails.corpus.size.toLocaleString('de-DE') }}</strong> BPKs</div>
-                  <div><strong>{{ card.calculationDetails.corpus.found.toLocaleString('de-DE') }}</strong> gefunden</div>
-                  <div class="col-span-2 text-gray-500 dark:text-gray-400">{{ card.calculationDetails.corpus.dateRange }}</div>
+                  <!-- For entities/persons/countries -->
+                  <div v-if="card.calculationDetails.corpus.found"><strong>{{ card.calculationDetails.corpus.found.toLocaleString('de-DE') }}</strong> gefunden</div>
+                  <!-- For themes -->
+                  <div v-if="card.calculationDetails.corpus.phrases"><strong>{{ card.calculationDetails.corpus.phrases.toLocaleString('de-DE') }}</strong> Phrasen</div>
+                  <div v-if="card.calculationDetails.corpus.clusters"><strong>{{ card.calculationDetails.corpus.clusters.toLocaleString('de-DE') }}</strong> Cluster</div>
+                  <!-- For sentences -->
+                  <div v-if="card.calculationDetails.corpus.totalSentences"><strong>{{ card.calculationDetails.corpus.totalSentences.toLocaleString('de-DE') }}</strong> Sätze</div>
+                  <div v-if="card.calculationDetails.corpus.canonicalForms"><strong>{{ card.calculationDetails.corpus.canonicalForms.toLocaleString('de-DE') }}</strong> nach Merge</div>
+                  <div v-if="card.calculationDetails.corpus.dateRange" class="col-span-2 text-gray-500 dark:text-gray-400">{{ card.calculationDetails.corpus.dateRange }}</div>
                 </div>
               </div>
 

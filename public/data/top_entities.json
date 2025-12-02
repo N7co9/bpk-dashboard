@@ -1,52 +1,28 @@
 {
   "metadata": {
-    "extraction_date": "2025-12-01T16:20:24.218979",
-    "corpus_size": 1368,
-    "date_range": {
-      "start": "2016-01-04",
-      "end": "2025-09-22"
-    },
-    "total_entities_found": 17923,
-    "after_threshold": 44,
-    "processing_time_seconds": 1563.756152,
-    "method": "NER-based (ORG, LOC, EVENT, PRODUCT entities)",
-    "model": "spaCy de_core_news_lg",
-    "features": [
-      "Multi-word entities only",
-      "Case normalization (all Nominativ)",
-      "Article removal",
-      "Typo correction",
-      "Meta-term filtering",
-      "Post-processed: Duplicate entity merging applied"
-    ]
+    "extraction_date": "2025-12-02T16:26:38.968946",
+    "extractor": "TopEntitiesExtractor",
+    "corpus_size": 1368
   },
   "top_entities": [
     {
       "label": "Auswärtige Amt",
-      "value": 2933
-    },
-    {
-      "label": "Europäische Union",
-      "value": 2073
-    },
-    {
-      "label": "Deutsche Bundestag",
-      "value": 977
+      "value": 2925
     },
     {
       "label": "Vereinte Nationen",
-      "value": 906
+      "value": 902
+    },
+    {
+      "label": "Europäische Union",
+      "value": 656
     },
     {
       "label": "Europäische Kommission",
-      "value": 892
+      "value": 529
     },
     {
       "label": "Europäische Rat",
-      "value": 653
-    },
-    {
-      "label": "Vereinigte Staaten",
       "value": 459
     },
     {
@@ -58,43 +34,39 @@
       "value": 363
     },
     {
-      "label": "Europäische Parlament",
-      "value": 273
+      "label": "Vereinigten Staaten",
+      "value": 254
     },
     {
-      "label": "Corona Pandemie",
-      "value": 248
+      "label": "Korona Pandemie",
+      "value": 241
     },
     {
-      "label": "Deutsche Bahn",
-      "value": 181
+      "label": "Vereinigten Staaten Von Amerika",
+      "value": 202
     },
     {
       "label": "Bundesamt Für Verfassungsschutz",
       "value": 163
     },
     {
-      "label": "Deutsche Welle",
-      "value": 152
+      "label": "Europäischen Rates",
+      "value": 156
     },
     {
-      "label": "Britische Regierung",
-      "value": 127
+      "label": "Europäische Parlament",
+      "value": 136
     },
     {
-      "label": "Europäische Staaten",
-      "value": 120
+      "label": "Deutsche Bundestag",
+      "value": 117
     },
     {
-      "label": "Deutsche Bank",
-      "value": 112
+      "label": "Europäischen Staaten",
+      "value": 107
     },
     {
       "label": "Saudi Arabien",
-      "value": 99
-    },
-    {
-      "label": "Israelische Armee",
       "value": 99
     },
     {
@@ -110,20 +82,12 @@
       "value": 93
     },
     {
-      "label": "Türkische Regierung",
-      "value": 83
-    },
-    {
       "label": "Internationalen Strafgerichtshof",
       "value": 78
     },
     {
       "label": "Bundesamt Für Migration Und Flüchtlinge",
       "value": 75
-    },
-    {
-      "label": "Italienische Regierung",
-      "value": 73
     },
     {
       "label": "Air Berlin",
@@ -134,15 +98,19 @@
       "value": 68
     },
     {
-      "label": "Afrikanische Union",
-      "value": 68
+      "label": "Deutsche Bahn",
+      "value": 67
     },
     {
       "label": "Nordrhein Westfalen",
       "value": 67
     },
     {
-      "label": "Israelische Regierung",
+      "label": "Britische Regierung",
+      "value": 65
+    },
+    {
+      "label": "Türkische Regierung",
       "value": 64
     },
     {
@@ -150,11 +118,15 @@
       "value": 63
     },
     {
+      "label": "Israelische Armee",
+      "value": 63
+    },
+    {
       "label": "Sachsen Anhalt",
       "value": 63
     },
     {
-      "label": "Griechische Inseln",
+      "label": "Britischen Regierung",
       "value": 62
     },
     {
@@ -166,8 +138,16 @@
       "value": 62
     },
     {
+      "label": "Griechischen Inseln",
+      "value": 61
+    },
+    {
       "label": "Internationalen Gerichtshof",
       "value": 59
+    },
+    {
+      "label": "Deutsche Bank",
+      "value": 57
     },
     {
       "label": "Nord Stream",
@@ -186,6 +166,10 @@
       "value": 52
     },
     {
+      "label": "Italienischen Regierung",
+      "value": 51
+    },
+    {
       "label": "Home Office",
       "value": 51
     },
@@ -196,6 +180,30 @@
     {
       "label": "Schleswig Holstein",
       "value": 48
+    },
+    {
+      "label": "Land Berlin",
+      "value": 48
+    },
+    {
+      "label": "Republik Moldau",
+      "value": 48
+    },
+    {
+      "label": "Afrikanischen Union",
+      "value": 47
+    },
+    {
+      "label": "Russischen Föderation",
+      "value": 45
+    },
+    {
+      "label": "Eu Türkei",
+      "value": 45
+    },
+    {
+      "label": "Berliner Polizei",
+      "value": 45
     }
   ]
 }

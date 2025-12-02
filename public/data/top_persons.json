@@ -1,20 +1,13 @@
 {
   "metadata": {
-    "extraction_date": "2025-12-01T15:03:01.916589",
-    "corpus_size": 1368,
-    "date_range": {
-      "start": "2016-01-04",
-      "end": "2025-09-22"
-    },
-    "processing_time_seconds": 1553.261351108551,
-    "docs_per_second": 0.8807275086215649,
-    "total_persons_found": 6374,
-    "after_threshold": 50
+    "extraction_date": "2025-12-02T16:26:38.968943",
+    "extractor": "TopPersonsExtractor",
+    "corpus_size": 1368
   },
   "top_persons": [
     {
       "label": "Olaf Scholz",
-      "value": 406
+      "value": 403
     },
     {
       "label": "Donald Trump",
@@ -22,7 +15,7 @@
     },
     {
       "label": "Angela Merkel",
-      "value": 200
+      "value": 199
     },
     {
       "label": "Steffen Hebestreit",
@@ -66,7 +59,7 @@
     },
     {
       "label": "Herm Erdogan",
-      "value": 57
+      "value": 56
     },
     {
       "label": "Christiane Hoffmann",
@@ -89,11 +82,11 @@
       "value": 46
     },
     {
-      "label": "Steffi Lemke",
+      "label": "Ulrike Demmer",
       "value": 45
     },
     {
-      "label": "Ulrike Demmer",
+      "label": "Steffi Lemke",
       "value": 45
     },
     {
@@ -149,20 +142,20 @@
       "value": 29
     },
     {
-      "label": "Fabian Busch",
-      "value": 28
-    },
-    {
-      "label": "Volker Wissing",
-      "value": 28
-    },
-    {
       "label": "Boris Reitschuster",
       "value": 28
     },
     {
       "label": "Helmut Kohl",
       "value": 28
+    },
+    {
+      "label": "Fabian Busch",
+      "value": 27
+    },
+    {
+      "label": "Volker Wissing",
+      "value": 27
     },
     {
       "label": "Friedrich März",

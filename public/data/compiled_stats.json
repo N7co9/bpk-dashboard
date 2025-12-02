@@ -1,231 +1,345 @@
 {
+  "metadata": {
+    "generated_at": "2025-12-02T16:26:38.968926",
+    "pipeline": "BPK Pipeline v2.0",
+    "sample_size": "full corpus"
+  },
   "fundamentalStats": {
-    "bpkCount": 1368,
-    "avgDurationMinutes": 61,
-    "avgWordCount": 8039,
-    "vocabularySize": 173930
+    "bpks_analyzed": 1368,
+    "average_duration": 61.1,
+    "date_range": {
+      "start": "2016-01-04",
+      "end": "2025-09-22"
+    }
   },
   "statisticalBasics": {
-    "totalWordCount": 10997008,
-    "avg_ttr_per_bpk": 0.203,
-    "avgSentenceLength": 24.8,
-    "stopwordPercentage": 49.0,
-    "stopwordNominal": 5389827,
-    "lexicalDensity": 0.52,
-    "fillerWordRate": 1.07,
-    "honoresR": 120.5,
-    "yulesK": 85.3,
-    "redundanz": 15.6
+    "metadata": {
+      "extraction_date": "2025-12-02T16:26:38.968932",
+      "extractor": "StatisticalBasicsExtractor",
+      "corpus_size": 1368
+    },
+    "lexical_diversity": {
+      "type_token_ratio": 0.0168,
+      "yules_k": 158.05,
+      "unique_tokens": 184638,
+      "total_tokens": 10985534
+    },
+    "sentence_statistics": {
+      "average_length": 54.4,
+      "total_sentences": 201841
+    },
+    "pos_distribution": [
+      {
+        "tag": "NOUN",
+        "count": 1933450
+      },
+      {
+        "tag": "ADV",
+        "count": 1834205
+      },
+      {
+        "tag": "DET",
+        "count": 1373006
+      },
+      {
+        "tag": "PRON",
+        "count": 1130603
+      },
+      {
+        "tag": "VERB",
+        "count": 1091224
+      },
+      {
+        "tag": "ADP",
+        "count": 1060473
+      },
+      {
+        "tag": "AUX",
+        "count": 814609
+      },
+      {
+        "tag": "ADJ",
+        "count": 495060
+      },
+      {
+        "tag": "CCONJ",
+        "count": 377390
+      },
+      {
+        "tag": "PROPN",
+        "count": 279582
+      }
+    ],
+    "entity_type_distribution": [
+      {
+        "type": "LOC",
+        "count": 158979
+      },
+      {
+        "type": "MISC",
+        "count": 91446
+      },
+      {
+        "type": "ORG",
+        "count": 89952
+      },
+      {
+        "type": "PER",
+        "count": 71475
+      }
+    ]
   },
   "frequencyDistribution": {
     "top_words": [
       {
         "label": "frage",
-        "value": 60928
+        "value": 59748
       },
       {
         "label": "herr",
-        "value": 34130
+        "value": 33359
       },
       {
         "label": "thema",
-        "value": 30298
+        "value": 29966
       },
       {
         "label": "bundesregierung",
-        "value": 26013
-      },
-      {
-        "label": "jahr",
-        "value": 18876
+        "value": 26012
       },
       {
         "label": "land",
-        "value": 15965
+        "value": 15975
       },
       {
         "label": "frau",
-        "value": 13037
+        "value": 13035
       },
       {
         "label": "gespräch",
-        "value": 12975
+        "value": 13020
       },
       {
         "label": "fall",
-        "value": 11932
+        "value": 11962
       },
       {
         "label": "mensch",
-        "value": 10791
-      }
-    ],
-    "top_sentences": [
-      {
-        "label": "mit einem neuen thema",
-        "value": 1067
+        "value": 10809
       },
       {
-        "label": "liebe kolleginnen und kollegen herzlich willkommen",
-        "value": 437
-      },
-      {
-        "label": "das sehe ich nicht",
-        "value": 62
-      },
-      {
-        "label": "eine frage an herrn",
-        "value": 39
-      },
-      {
-        "label": "fragen zu anderen themen",
-        "value": 31
-      },
-      {
-        "label": "gibt es weitere fragen zu dem komplex",
-        "value": 29
-      },
-      {
-        "label": "ja vielen dank für die frage",
-        "value": 28
-      },
-      {
-        "label": "das ist nicht der fall",
-        "value": 27
-      },
-      {
-        "label": "weitere fragen dazu sehe ich nicht",
-        "value": 26
-      },
-      {
-        "label": "herzlich willkommen in der bundespressekonferenz zur regierungspressekonferenz",
-        "value": 23
+        "label": "woche",
+        "value": 9700
       }
     ],
     "top_persons": [
       {
-        "label": "Jung",
-        "value": 1865
+        "label": "Olaf Scholz",
+        "value": 403
       },
       {
-        "label": "Hoffmann",
-        "value": 483
+        "label": "Donald Trump",
+        "value": 207
       },
       {
-        "label": "Steiner",
-        "value": 465
+        "label": "Angela Merkel",
+        "value": 199
       },
       {
-        "label": "Rinke",
-        "value": 436
+        "label": "Steffen Hebestreit",
+        "value": 106
       },
       {
-        "label": "Schäfer",
-        "value": 362
+        "label": "Robert Habeck",
+        "value": 98
       },
       {
-        "label": "Fischer",
-        "value": 359
+        "label": "Sigmar Gabriel",
+        "value": 94
       },
       {
-        "label": "Wagner",
-        "value": 344
+        "label": "Wladimir Putin",
+        "value": 83
       },
       {
-        "label": "merkel",
-        "value": 332
+        "label": "Christian Lindner",
+        "value": 74
       },
       {
-        "label": "Seibert",
-        "value": 277
+        "label": "Martin Schulz",
+        "value": 69
       },
       {
-        "label": "Jessen",
-        "value": 240
+        "label": "Peter Altmaier",
+        "value": 67
       }
     ],
     "top_locations": [
       {
         "label": "Deutschland",
-        "value": 20149
+        "value": 20043
       },
       {
         "label": "Ukraine",
-        "value": 5139
+        "value": 5157
       },
       {
         "label": "Türkei",
-        "value": 4112
-      },
-      {
-        "label": "Europa",
-        "value": 3786
+        "value": 4247
       },
       {
         "label": "Russland",
-        "value": 3344
+        "value": 3575
       },
       {
         "label": "Israel",
-        "value": 2917
-      },
-      {
-        "label": "Berlin",
-        "value": 2447
-      },
-      {
-        "label": "USA",
-        "value": 2277
+        "value": 3421
       },
       {
         "label": "Afghanistan",
-        "value": 1911
+        "value": 2092
       },
       {
         "label": "Iran",
-        "value": 1865
+        "value": 1998
+      },
+      {
+        "label": "Syrien",
+        "value": 1990
+      },
+      {
+        "label": "China",
+        "value": 1704
+      },
+      {
+        "label": "Frankreich",
+        "value": 1608
       }
     ],
     "top_themes": [
       {
-        "label": "Internationale Beziehungen",
-        "value": 45673
+        "label": "Rechtssicherheit",
+        "value": 4824
       },
       {
-        "label": "Wirtschaft & Finanzen",
-        "value": 30882
+        "label": "Öffentliche Sicherheit",
+        "value": 4656
+      },
+      {
+        "label": "Grenze",
+        "value": 3855
       },
       {
         "label": "Innere Sicherheit",
-        "value": 26322
+        "value": 3152
       },
       {
-        "label": "Gesundheitspolitik",
-        "value": 20532
+        "label": "Haushaltsberatung",
+        "value": 3125
       },
       {
-        "label": "Verteidigung",
-        "value": 16246
+        "label": "Waffen",
+        "value": 2882
       },
       {
-        "label": "Migration & Integration",
-        "value": 14214
+        "label": "Wirtschaftliche Entwicklung",
+        "value": 2299
       },
       {
-        "label": "Klimawandel & Energie",
-        "value": 12937
+        "label": "Schweren Waffen",
+        "value": 2202
       },
       {
-        "label": "Bildung & Forschung",
-        "value": 12378
+        "label": "Israelischen Regierung",
+        "value": 1999
       },
       {
-        "label": "Soziale Gerechtigkeit",
-        "value": 8993
+        "label": "Nato Partnern",
+        "value": 1894
+      }
+    ],
+    "top_sentences": [
+      {
+        "label": "Liebe kolleginnen und kollegen herzlich willkommen.",
+        "value": 568
       },
       {
-        "label": "Digitalisierung",
-        "value": 8096
+        "label": "Ähm ja vielen dank für die frage.",
+        "value": 29
+      },
+      {
+        "label": "Weitere fragen dazu sehe ich nicht.",
+        "value": 28
+      },
+      {
+        "label": "Gibt es weitere fragen zu dem komplex.",
+        "value": 25
+      },
+      {
+        "label": "Gibt es weitere fragen dazu.",
+        "value": 22
+      },
+      {
+        "label": "Das ist nicht der fall.",
+        "value": 22
+      },
+      {
+        "label": "Dann wechseln wir erneut das thema.",
+        "value": 18
+      },
+      {
+        "label": "Ja vielen dank für die frage.",
+        "value": 14
+      },
+      {
+        "label": "Ich begrüße regierungssprecher steffen hebestreit.",
+        "value": 14
+      },
+      {
+        "label": "Kollegen herzlich willkommen in der bundespressekonferenz.",
+        "value": 13
+      }
+    ],
+    "top_entities": [
+      {
+        "label": "Auswärtige Amt",
+        "value": 2925
+      },
+      {
+        "label": "Vereinte Nationen",
+        "value": 902
+      },
+      {
+        "label": "Europäische Union",
+        "value": 656
+      },
+      {
+        "label": "Europäische Kommission",
+        "value": 529
+      },
+      {
+        "label": "Europäische Rat",
+        "value": 459
+      },
+      {
+        "label": "Bundesrepublik Deutschland",
+        "value": 428
+      },
+      {
+        "label": "New York",
+        "value": 363
+      },
+      {
+        "label": "Vereinigten Staaten",
+        "value": 254
+      },
+      {
+        "label": "Korona Pandemie",
+        "value": 241
+      },
+      {
+        "label": "Vereinigten Staaten Von Amerika",
+        "value": 202
       }
     ]
   }

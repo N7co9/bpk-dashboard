@@ -90,6 +90,30 @@ interface TopCountriesData {
     top_countries: StatItem[];
 }
 
+interface TopThemesData {
+    metadata: {
+        extraction_date: string;
+        corpus_size: number;
+        total_phrases: number;
+        total_clusters: number;
+        method: string;
+        embedding_model: string;
+        clustering: string;
+    };
+    top_themes: StatItem[];
+}
+
+interface TopSentencesData {
+    metadata: {
+        extraction_date: string;
+        extractor: string;
+        corpus_size: number;
+        total_sentences: number;
+        canonical_forms: number;
+    };
+    top_sentences: StatItem[];
+}
+
 // The composable function
 export function useBPKData() {
     const fundamentalStats = ref(null);
@@ -99,6 +123,8 @@ export function useBPKData() {
     const topPersons = ref<TopPersonsData | null>(null); // New ref for Top Persons from pipeline v2
     const topEntities = ref<TopEntitiesData | null>(null); // New ref for Top Entities from pipeline v2
     const topCountries = ref<TopCountriesData | null>(null); // New ref for Top Countries from pipeline v2
+    const topThemes = ref<TopThemesData | null>(null); // New ref for Top Themes from pipeline v2
+    const topSentences = ref<TopSentencesData | null>(null); // New ref for Top Sentences from pipeline v2
 
     const loadData = async () => {
         try {
@@ -129,6 +155,16 @@ export function useBPKData() {
             if (!topCountriesResponse.ok) throw new Error('Network response for top_countries.json was not ok');
             topCountries.value = await topCountriesResponse.json();
 
+            // Load new Top Themes data from pipeline v2
+            const topThemesResponse = await fetch('/data/top_themes.json');
+            if (!topThemesResponse.ok) throw new Error('Network response for top_themes.json was not ok');
+            topThemes.value = await topThemesResponse.json();
+
+            // Load new Top Sentences data from pipeline v2
+            const topSentencesResponse = await fetch('/data/top_sentences.json');
+            if (!topSentencesResponse.ok) throw new Error('Network response for top_sentences.json was not ok');
+            topSentences.value = await topSentencesResponse.json();
+
         } catch (error) {
             console.error("Fehler beim Laden der BPK-Daten:", error);
         }
@@ -143,7 +179,9 @@ export function useBPKData() {
         advancedAnalysis,
         topPersons,
         topEntities,
-        topCountries
+        topCountries,
+        topThemes,
+        topSentences
     };
 }
 

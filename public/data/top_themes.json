@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "extraction_date": "2025-12-02T16:47:21",
+    "corpus_size": 1338,
+    "total_phrases": 10994,
+    "total_clusters": 60,
+    "method": "BERTopic 3-Phase Pipeline: Preprocess → Model → Aggregate",
+    "embedding_model": "paraphrase-multilingual-MiniLM-L12-v2",
+    "clustering": "UMAP + HDBSCAN"
+  },
+  "top_themes": [
+    {
+      "label": "Rechtssicherheit",
+      "value": 4824
+    },
+    {
+      "label": "Öffentliche Sicherheit",
+      "value": 4656
+    },
+    {
+      "label": "Grenze",
+      "value": 3855
+    },
+    {
+      "label": "Innere Sicherheit",
+      "value": 3152
+    },
+    {
+      "label": "Haushaltsberatung",
+      "value": 3125
+    },
+    {
+      "label": "Waffen",
+      "value": 2882
+    },
+    {
+      "label": "Wirtschaftliche Entwicklung",
+      "value": 2299
+    },
+    {
+      "label": "Schweren Waffen",
+      "value": 2202
+    },
+    {
+      "label": "Israelischen Regierung",
+      "value": 1999
+    },
+    {
+      "label": "Nato Partnern",
+      "value": 1894
+    }
+  ]
+}

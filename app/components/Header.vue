@@ -1,9 +1,25 @@
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, computed } from 'vue';
 import { useBPKData } from '~/composables/useBPKData';
 
 // Daten aus dem Composable abrufen
-const { fundamentalStats } = useBPKData();
+const { fundamentalStats, statisticalBasics } = useBPKData();
+
+// Computed property to combine stats from both sources
+const combinedStats = computed(() => {
+  if (!fundamentalStats.value) return null;
+  
+  const stats = { ...fundamentalStats.value };
+  
+  // Add avg_words_per_bpk from statisticalBasics if available
+  if (statisticalBasics.value?.lexical_diversity) {
+    const lex = statisticalBasics.value.lexical_diversity;
+    stats.avg_words_per_bpk = Math.round(lex.total_tokens / stats.bpks_analyzed);
+    stats.vocabulary_size = lex.unique_tokens;
+  }
+  
+  return stats;
+});
 
 const links = [
   { name: 'Statistiken', href: '#statistiken' },
@@ -13,10 +29,10 @@ const links = [
 ]
 
 const statsConfig = ref([
-  { name: 'BPKs ausgewertet', key: 'bpkCount', suffix: '' },
-  { name: 'Ø BPK Dauer', key: 'avgDurationMinutes', suffix: ' Min' },
-  { name: 'Ø Wörter pro BPK', key: 'avgWordCount', suffix: '' },
-  { name: 'Vokabulargröße', key: 'vocabularySize', suffix: '+' },
+  { name: 'BPKs ausgewertet', key: 'bpks_analyzed', suffix: '' },
+  { name: 'Ø BPK Dauer', key: 'average_duration', suffix: ' Min' },
+  { name: 'Ø Wörter pro BPK', key: 'avg_words_per_bpk', suffix: '' },
+  { name: 'Vokabulargröße', key: 'vocabulary_size', suffix: '+' },
 ]);
 
 // Reactive stats, die animiert werden
@@ -36,8 +52,8 @@ const animateValue = (statRef, start, end, duration) => {
 };
 
 onMounted(() => {
-  // Beobachte die fundamentalStats aus dem Composable
-  watch(fundamentalStats, (newStats) => {
+  // Beobachte die combinedStats aus dem Composable
+  watch(combinedStats, (newStats) => {
     if (newStats) {
       animatedStats.value.forEach(stat => {
         const newValue = newStats[stat.key];
