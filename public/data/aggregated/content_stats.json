@@ -1,0 +1,452 @@
+{
+  "metadata": {
+    "extraction_date": "2025-12-15T13:46:24.435596",
+    "extractor": "content_stats",
+    "corpus_size": 11,
+    "spacy_available": true
+  },
+  "header_kpis": {
+    "bpks_analyzed": 11,
+    "unique_persons": 311,
+    "unique_locations": 437,
+    "total_questions": 810
+  },
+  "statistical_basics": {
+    "total_duration_hours": 8.5,
+    "total_words": 76814,
+    "avg_words_per_bpk": 6983,
+    "avg_questions_per_bpk": 73.6,
+    "avg_duration_minutes": 46.6,
+    "top_person": "Steinmeier",
+    "top_person_mentions": 6,
+    "top_location": "Ukraine",
+    "top_location_mentions": 132,
+    "top_topic": "Europa & EU",
+    "top_topic_mentions": 602,
+    "date_range": {
+      "start": "2016-09-19",
+      "end": "2025-12-15"
+    }
+  },
+  "top_persons": [
+    {
+      "label": "Steinmeier",
+      "value": 6
+    },
+    {
+      "label": "Zelensky",
+      "value": 4
+    },
+    {
+      "label": "Wadephul",
+      "value": 4
+    },
+    {
+      "label": "Herr Merz",
+      "value": 3
+    },
+    {
+      "label": "Gabriel",
+      "value": 3
+    },
+    {
+      "label": "Before'n",
+      "value": 3
+    },
+    {
+      "label": "Klingbeil",
+      "value": 3
+    },
+    {
+      "label": "Herrn Klingbeil",
+      "value": 3
+    },
+    {
+      "label": "Modernisierungsagenda",
+      "value": 3
+    },
+    {
+      "label": "Donald Trump",
+      "value": 2
+    },
+    {
+      "label": "Herrn Delves",
+      "value": 2
+    },
+    {
+      "label": "Mark Rutte",
+      "value": 2
+    },
+    {
+      "label": "Herr Neumann",
+      "value": 2
+    },
+    {
+      "label": "Alemanni",
+      "value": 2
+    },
+    {
+      "label": "Schiebel",
+      "value": 2
+    },
+    {
+      "label": "Kirschner",
+      "value": 2
+    },
+    {
+      "label": "Flosdorf",
+      "value": 2
+    },
+    {
+      "label": "Sebastian Hille",
+      "value": 2
+    },
+    {
+      "label": "Herrn Rusch",
+      "value": 2
+    },
+    {
+      "label": "Erik Rusch",
+      "value": 2
+    }
+  ],
+  "top_locations": [
+    {
+      "label": "Ukraine",
+      "value": 132
+    },
+    {
+      "label": "Deutschland",
+      "value": 114
+    },
+    {
+      "label": "Russland",
+      "value": 67
+    },
+    {
+      "label": "Europa",
+      "value": 59
+    },
+    {
+      "label": "USA",
+      "value": 39
+    },
+    {
+      "label": "Israel",
+      "value": 32
+    },
+    {
+      "label": "Venezuela",
+      "value": 19
+    },
+    {
+      "label": "Afghanistan",
+      "value": 19
+    },
+    {
+      "label": "Gaza",
+      "value": 19
+    },
+    {
+      "label": "Brüssel",
+      "value": 16
+    },
+    {
+      "label": "Russlands",
+      "value": 15
+    },
+    {
+      "label": "Italien",
+      "value": 15
+    },
+    {
+      "label": "Berlin",
+      "value": 14
+    },
+    {
+      "label": "Leyen",
+      "value": 14
+    },
+    {
+      "label": "Staaten",
+      "value": 13
+    },
+    {
+      "label": "Washington",
+      "value": 12
+    },
+    {
+      "label": "Syrien",
+      "value": 12
+    },
+    {
+      "label": "Auswärtige Amt",
+      "value": 11
+    },
+    {
+      "label": "Europäer",
+      "value": 11
+    },
+    {
+      "label": "Amerikaner",
+      "value": 11
+    }
+  ],
+  "top_organizations": [
+    {
+      "label": "ZDF",
+      "value": 33
+    },
+    {
+      "label": "EU",
+      "value": 26
+    },
+    {
+      "label": "EU-Kommission",
+      "value": 25
+    },
+    {
+      "label": "Bundeswehr",
+      "value": 23
+    },
+    {
+      "label": "Bundestag",
+      "value": 21
+    },
+    {
+      "label": "BAMF",
+      "value": 17
+    },
+    {
+      "label": "Kommission",
+      "value": 16
+    },
+    {
+      "label": "NATO",
+      "value": 14
+    },
+    {
+      "label": "BMI",
+      "value": 14
+    },
+    {
+      "label": "Europäischen Rat",
+      "value": 12
+    },
+    {
+      "label": "Europäische Union",
+      "value": 10
+    },
+    {
+      "label": "Europäischen Union",
+      "value": 10
+    },
+    {
+      "label": "Bundespressekonferenz",
+      "value": 9
+    },
+    {
+      "label": "Bundeskanzleramt",
+      "value": 7
+    },
+    {
+      "label": "IS",
+      "value": 7
+    }
+  ],
+  "top_topics": [
+    {
+      "label": "Europa & EU",
+      "value": 602
+    },
+    {
+      "label": "Sicherheit & Verteidigung",
+      "value": 197
+    },
+    {
+      "label": "Ukraine-Konflikt",
+      "value": 178
+    },
+    {
+      "label": "Russland",
+      "value": 173
+    },
+    {
+      "label": "USA & Transatlantik",
+      "value": 149
+    },
+    {
+      "label": "Innenpolitik",
+      "value": 113
+    },
+    {
+      "label": "Nahost",
+      "value": 103
+    },
+    {
+      "label": "Wirtschaft & Finanzen",
+      "value": 95
+    },
+    {
+      "label": "Klimapolitik",
+      "value": 60
+    },
+    {
+      "label": "China",
+      "value": 46
+    },
+    {
+      "label": "Migration & Asyl",
+      "value": 35
+    },
+    {
+      "label": "Energie",
+      "value": 16
+    }
+  ],
+  "per_bpk": [
+    {
+      "video_id": "rXB-zo5Jb0c",
+      "title": "15. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-12-15",
+      "word_count": 5554,
+      "duration_minutes": 41.2,
+      "questions_count": 58,
+      "top_person": "Franziska Valdez-Sifuentes",
+      "top_location": "Ukraine",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 23,
+      "locations_mentioned": 51
+    },
+    {
+      "video_id": "3MRO1U7aVEw",
+      "title": "12. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-12-12",
+      "word_count": 10011,
+      "duration_minutes": 71.0,
+      "questions_count": 91,
+      "top_person": "Donald Trump",
+      "top_location": "Ukraine",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 53,
+      "locations_mentioned": 83
+    },
+    {
+      "video_id": "NRVsmQ6V_CY",
+      "title": "8. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-12-08",
+      "word_count": 3433,
+      "duration_minutes": 27.6,
+      "questions_count": 47,
+      "top_person": "Herrn Rusch",
+      "top_location": "Ukraine",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 22,
+      "locations_mentioned": 35
+    },
+    {
+      "video_id": "ngwh6xglmfw",
+      "title": "3. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-12-03",
+      "word_count": 7574,
+      "duration_minutes": 53.1,
+      "questions_count": 78,
+      "top_person": "Herr Rusch",
+      "top_location": "Deutschland",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 24,
+      "locations_mentioned": 78
+    },
+    {
+      "video_id": "fGf38sN2Q1o",
+      "title": "1. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-12-01",
+      "word_count": 8990,
+      "duration_minutes": 65.0,
+      "questions_count": 108,
+      "top_person": "Kreuzfeld",
+      "top_location": "Ukraine",
+      "top_topic": "Klimapolitik",
+      "persons_mentioned": 26,
+      "locations_mentioned": 64
+    },
+    {
+      "video_id": "WPMAXzsSjvI",
+      "title": "26. November 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-11-26",
+      "word_count": 8410,
+      "duration_minutes": 59.4,
+      "questions_count": 102,
+      "top_person": "Gerhäuser",
+      "top_location": "Ukraine",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 26,
+      "locations_mentioned": 64
+    },
+    {
+      "video_id": "VLUunsds4mQ",
+      "title": "24. November 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-11-24",
+      "word_count": 7473,
+      "duration_minutes": 56.0,
+      "questions_count": 68,
+      "top_person": "Klaasmann",
+      "top_location": "Europa",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 34,
+      "locations_mentioned": 33
+    },
+    {
+      "video_id": "hqwr_91kEko",
+      "title": "21. November 2025 - Regierungspressekonferenz | BPK",
+      "date": "2025-11-21",
+      "word_count": 5955,
+      "duration_minutes": 47.6,
+      "questions_count": 60,
+      "top_person": "Herrn Klingbeil",
+      "top_location": "Ukraine",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 34,
+      "locations_mentioned": 66
+    },
+    {
+      "video_id": "DLwyMVRik0s",
+      "title": "20. Dezember 2017 - Komplette Bundespressekonferenz (RegPK)",
+      "date": "2017-12-20",
+      "word_count": 6449,
+      "duration_minutes": 48.7,
+      "questions_count": 57,
+      "top_person": "Gabriel",
+      "top_location": "Afghanistan",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 27,
+      "locations_mentioned": 55
+    },
+    {
+      "video_id": "DRVaAbkEIlc",
+      "title": "Aufklärungsauftrag - Komplette Bundespressekonferenz vom 19. September 2016",
+      "date": "2016-09-19",
+      "word_count": 5555,
+      "duration_minutes": 42.8,
+      "questions_count": 51,
+      "top_person": "Steinmeier",
+      "top_location": "Syrien",
+      "top_topic": "Sicherheit & Verteidigung",
+      "persons_mentioned": 23,
+      "locations_mentioned": 61
+    },
+    {
+      "video_id": "bgpjF2wwM7M",
+      "title": "",
+      "date": null,
+      "word_count": 7410,
+      "duration_minutes": 0.0,
+      "questions_count": 90,
+      "top_person": "Wang Yi",
+      "top_location": "Deutschland",
+      "top_topic": "Europa & EU",
+      "persons_mentioned": 42,
+      "locations_mentioned": 85
+    }
+  ]
+}

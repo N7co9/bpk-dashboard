@@ -1,0 +1,23 @@
+{
+  "generated_at": "2025-12-15T13:46:24.437176",
+  "source_data": {
+    "json_dir": "/Users/nico.gruenewald/PhpstormProjects/bpk-board/public/data/json",
+    "rttm_dir": "/Users/nico.gruenewald/PhpstormProjects/bpk-board/public/data/rttm",
+    "transcript_count": 11,
+    "rttm_count": 11
+  },
+  "outputs": {
+    "basic_stats": {
+      "filename": "corpus_stats.json",
+      "success": true
+    },
+    "speaker_stats": {
+      "filename": "speaker_analysis.json",
+      "success": true
+    },
+    "content_stats": {
+      "filename": "content_stats.json",
+      "success": true
+    }
+  }
+}

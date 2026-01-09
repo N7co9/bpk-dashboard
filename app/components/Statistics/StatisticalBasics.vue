@@ -1,67 +1,59 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { useBPKData } from '~/composables/useBPKData';
+import { useAggregatedData } from '~/composables/useAggregatedData';
 
-const { statisticalBasics } = useBPKData();
-
-const stats = computed(() => statisticalBasics.value);
+const { statisticalBasics, topTopics, topLocations, isLoading } = useAggregatedData();
 
 const hoveredCardIndex = ref<number | null>(null);
 
 const formattedStats = computed(() => {
-  if (!stats.value) return [];
+  if (!statisticalBasics.value) return [];
+
+  const stats = statisticalBasics.value;
 
   return [
     {
-      label: 'TTR (Ø pro BPK)',
-      value: stats.value.avg_ttr_per_bpk?.toFixed(3) || 'N/A',
-      tooltip: 'Durchschnittliche Type-Token-Ratio pro BPK. Misst die lexikalische Vielfalt. Ein höherer Wert deutet auf einen abwechslungsreicheren Wortschatz hin.'
+      label: 'Top-Thema',
+      value: stats.top_topic || 'N/A',
+      tooltip: `Das meistdiskutierte Thema mit ${stats.top_topic_mentions} Erwähnungen.`
     },
     {
-      label: 'Ø Satzlänge',
-      value: stats.value.avgSentenceLength?.toFixed(1) || 'N/A',
-      tooltip: 'Die durchschnittliche Anzahl von Wörtern pro Satz. Gibt einen Hinweis auf die syntaktische Komplexität.'
+      label: 'Top-Land',
+      value: stats.top_location || 'N/A',
+      tooltip: `Das meistgenannte Land mit ${stats.top_location_mentions} Erwähnungen.`
     },
     {
-      label: 'Stoppwörter (Anteil)',
-      value: `${stats.value.stopwordPercentage?.toFixed(1) || 'N/A'}%`,
-      tooltip: 'Der prozentuale Anteil von häufigen Füllwörtern (z.B. "der", "die", "und") am gesamten Text.'
+      label: 'Ø Fragen/BPK',
+      value: stats.avg_questions_per_bpk?.toFixed(0) || 'N/A',
+      tooltip: 'Durchschnittliche Anzahl gestellter Fragen pro BPK.'
     },
     {
-      label: 'Stoppwörter (Nominal)',
-      value: stats.value.stopwordNominal?.toLocaleString('de-DE') || 'N/A',
-      tooltip: 'Die absolute Anzahl von häufigen Füllwörtern im gesamten Textkorpus.'
+      label: 'Gesamtdauer',
+      value: `${stats.total_duration_hours} Std`,
+      tooltip: 'Die Gesamtdauer aller analysierten BPKs in Stunden.'
     },
     {
       label: 'Wörter (Total)',
-      value: stats.value.totalWordCount?.toLocaleString('de-DE') || 'N/A',
-      tooltip: 'Die Gesamtzahl aller verarbeiteten Wörter im gesamten Textkorpus.'
+      value: stats.total_words?.toLocaleString('de-DE') || 'N/A',
+      tooltip: 'Die Gesamtzahl aller transkribierten Wörter im Korpus.'
     },
     {
-      label: 'Lexikalische Dichte',
-      value: stats.value.lexicalDensity?.toFixed(2) || 'N/A',
-      tooltip: 'Das Verhältnis von Inhaltswörtern (Nomen, Verben etc.) zu Funktionswörtern. Ein Maß für die Informationsdichte.'
+      label: 'Ø BPK-Dauer',
+      value: `${stats.avg_duration_minutes?.toFixed(0)} Min`,
+      tooltip: 'Durchschnittliche Dauer einer Bundespressekonferenz.'
     },
     {
-      label: 'Füllwort-Rate',
-      value: `${stats.value.fillerWordRate?.toFixed(2) || 'N/A'}%`,
-      tooltip: 'Anteil von Füllwörtern wie "äh", "also", "sozusagen" am gesamten Text.'
+      label: 'Ø Wörter/BPK',
+      value: Math.round(stats.avg_words_per_bpk)?.toLocaleString('de-DE') || 'N/A',
+      tooltip: 'Durchschnittliche Anzahl transkribierter Wörter pro BPK.'
     },
     {
-      label: 'Redundanz',
-      value: stats.value.redundanz?.toFixed(1) || 'N/A',
-      tooltip: 'Misst, wie oft Wörter innerhalb eines kurzen Abstandes wiederholt werden.'
+      label: 'Zeitraum',
+      value: stats.date_range?.start && stats.date_range?.end 
+        ? `${stats.date_range.start.slice(0,4)} - ${stats.date_range.end.slice(0,4)}`
+        : 'N/A',
+      tooltip: `Analysierter Zeitraum: ${stats.date_range?.start || '?'} bis ${stats.date_range?.end || '?'}`
     },
-    {
-      label: "Honoré's R",
-      value: stats.value.honoresR?.toFixed(1) || 'N/A',
-      tooltip: 'Ein weiteres, komplexeres Maß für die lexikalische Vielfalt.'
-    },
-    {
-      label: "Yule's K",
-      value: stats.value.yulesK?.toFixed(1) || 'N/A',
-      tooltip: 'Ein Maß für die lexikalische Wiederholungsrate.'
-    }
   ];
 });
 </script>
@@ -72,7 +64,7 @@ const formattedStats = computed(() => {
       Statistische Grundlagen
     </h2>
     <!-- We add a v-if here to only render the grid when the data is actually loaded -->
-    <UPageGrid v-if="stats" class="lg:grid-cols-5">
+    <UPageGrid v-if="formattedStats.length > 0" class="lg:grid-cols-5">
       <div
           v-for="(stat, index) in formattedStats"
           :key="stat.label"

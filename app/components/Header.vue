@@ -1,38 +1,33 @@
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue';
-import { useBPKData } from '~/composables/useBPKData';
+import { useAggregatedData } from '~/composables/useAggregatedData';
 
 // Daten aus dem Composable abrufen
-const { fundamentalStats, statisticalBasics } = useBPKData();
+const { fundamentalStats, contentStats } = useAggregatedData();
 
-// Computed property to combine stats from both sources
+// Computed property for header stats - meaningful KPIs for Jung&Naiv audience
 const combinedStats = computed(() => {
   if (!fundamentalStats.value) return null;
   
-  const stats = { ...fundamentalStats.value };
-  
-  // Add avg_words_per_bpk from statisticalBasics if available
-  if (statisticalBasics.value?.lexical_diversity) {
-    const lex = statisticalBasics.value.lexical_diversity;
-    stats.avg_words_per_bpk = Math.round(lex.total_tokens / stats.bpks_analyzed);
-    stats.vocabulary_size = lex.unique_tokens;
-  }
-  
-  return stats;
+  return {
+    bpks_analyzed: fundamentalStats.value.bpks_analyzed,
+    unique_locations: fundamentalStats.value.unique_locations,
+    unique_persons: fundamentalStats.value.unique_persons,
+    total_questions: fundamentalStats.value.total_questions,
+  };
 });
 
 const links = [
-  { name: 'Statistiken', href: '#statistiken' },
-  { name: 'Häufigkeiten', href: '#haufigkeiten' },
-  { name: 'Frame-Analyse', href: '#frame-analyse' },
+  { name: 'Statistiken', href: '#haufigkeiten' },
   { name: 'Sprecher-Analyse', href: '#sprecher-analyse' },
 ]
 
+// Header KPIs - inhaltlich wertvolle Kennzahlen
 const statsConfig = ref([
-  { name: 'BPKs ausgewertet', key: 'bpks_analyzed', suffix: '' },
-  { name: 'Ø BPK Dauer', key: 'average_duration', suffix: ' Min' },
-  { name: 'Ø Wörter pro BPK', key: 'avg_words_per_bpk', suffix: '' },
-  { name: 'Vokabulargröße', key: 'vocabulary_size', suffix: '+' },
+  { name: 'BPKs analysiert', key: 'bpks_analyzed', suffix: '' },
+  { name: 'Erwähnte Länder', key: 'unique_locations', suffix: '' },
+  { name: 'Genannte Personen', key: 'unique_persons', suffix: '' },
+  { name: 'Gestellte Fragen', key: 'total_questions', suffix: '' },
 ]);
 
 // Reactive stats, die animiert werden
@@ -78,7 +73,7 @@ onMounted(() => {
     <!-- Main Content -->
     <div class="relative z-10 mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
       <div class="mx-auto max-w-2xl lg:mx-0">
-        <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">BPK Dashboard</h1>
+        <h1 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">BPK Dashboard [Work in Progress: Placeholder Data as of now.]</h1>
         <p class="mt-8 text-lg font-medium text-pretty text-gray-200 sm:text-xl/8">
           Eine datenbasierte Analyse der Bundespressekonferenzen. Wir bieten Einblicke in Sprache, Akteure und Narrative.
         </p>

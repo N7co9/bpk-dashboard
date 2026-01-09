@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "extraction_date": "2025-12-15T13:46:14.102067",
+    "extractor": "basic_stats",
+    "corpus_size": 11
+  },
+  "corpus_stats": {
+    "total_bpks": 11,
+    "total_duration_seconds": 30744.0,
+    "total_duration_hours": 8.54,
+    "total_words": 76814,
+    "avg_duration_per_bpk_seconds": 2794.91,
+    "avg_duration_per_bpk_minutes": 46.6,
+    "avg_words_per_bpk": 6983.0,
+    "avg_words_per_minute": 149.9,
+    "date_range": {
+      "start": "2016-09-19",
+      "end": "2025-12-12"
+    }
+  },
+  "speaker_overview": {
+    "total_speaker_turns": 6068,
+    "avg_speakers_per_bpk": 12.0,
+    "avg_turns_per_bpk": 551.6
+  },
+  "per_bpk": [
+    {
+      "video_id": "3MRO1U7aVEw",
+      "title": "12. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": "2025-12-12",
+      "duration_seconds": 4262.0,
+      "duration_minutes": 71.0,
+      "word_count": 10011,
+      "speaker_count": 12,
+      "turn_count": 770,
+      "words_per_minute": 140.9
+    },
+    {
+      "video_id": "NRVsmQ6V_CY",
+      "title": "8. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": "2025-12-08",
+      "duration_seconds": 1655.0,
+      "duration_minutes": 27.6,
+      "word_count": 3433,
+      "speaker_count": 12,
+      "turn_count": 297,
+      "words_per_minute": 124.5
+    },
+    {
+      "video_id": "DLwyMVRik0s",
+      "title": "20. Dezember 2017 - Komplette Bundespressekonferenz (RegPK)",
+      "publish_date": "2017-12-20",
+      "duration_seconds": 2922.0,
+      "duration_minutes": 48.7,
+      "word_count": 6449,
+      "speaker_count": 12,
+      "turn_count": 467,
+      "words_per_minute": 132.4
+    },
+    {
+      "video_id": "DRVaAbkEIlc",
+      "title": "Aufklärungsauftrag - Komplette Bundespressekonferenz vom 19. September 2016",
+      "publish_date": "2016-09-19",
+      "duration_seconds": 2568.0,
+      "duration_minutes": 42.8,
+      "word_count": 5555,
+      "speaker_count": 12,
+      "turn_count": 433,
+      "words_per_minute": 129.8
+    },
+    {
+      "video_id": "VLUunsds4mQ",
+      "title": "24. November 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 3361.0,
+      "duration_minutes": 56.0,
+      "word_count": 7473,
+      "speaker_count": 12,
+      "turn_count": 721,
+      "words_per_minute": 133.4
+    },
+    {
+      "video_id": "WPMAXzsSjvI",
+      "title": "26. November 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 3563.0,
+      "duration_minutes": 59.4,
+      "word_count": 8410,
+      "speaker_count": 12,
+      "turn_count": 596,
+      "words_per_minute": 141.6
+    },
+    {
+      "video_id": "bgpjF2wwM7M",
+      "title": "",
+      "publish_date": null,
+      "duration_seconds": 0.0,
+      "duration_minutes": 0.0,
+      "word_count": 7410,
+      "speaker_count": 12,
+      "turn_count": 632,
+      "words_per_minute": 0
+    },
+    {
+      "video_id": "fGf38sN2Q1o",
+      "title": "1. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 3898.0,
+      "duration_minutes": 65.0,
+      "word_count": 8990,
+      "speaker_count": 12,
+      "turn_count": 785,
+      "words_per_minute": 138.4
+    },
+    {
+      "video_id": "hqwr_91kEko",
+      "title": "21. November 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 2859.0,
+      "duration_minutes": 47.6,
+      "word_count": 5955,
+      "speaker_count": 12,
+      "turn_count": 519,
+      "words_per_minute": 125.0
+    },
+    {
+      "video_id": "ngwh6xglmfw",
+      "title": "3. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 3184.0,
+      "duration_minutes": 53.1,
+      "word_count": 7574,
+      "speaker_count": 12,
+      "turn_count": 497,
+      "words_per_minute": 142.7
+    },
+    {
+      "video_id": "rXB-zo5Jb0c",
+      "title": "15. Dezember 2025 - Regierungspressekonferenz | BPK",
+      "publish_date": null,
+      "duration_seconds": 2472.0,
+      "duration_minutes": 41.2,
+      "word_count": 5554,
+      "speaker_count": 12,
+      "turn_count": 351,
+      "words_per_minute": 134.8
+    }
+  ]
+}
